@@ -1,0 +1,20 @@
+
+{
+  "hyprland/workspaces": {
+    "format": "{name}",
+
+    // Show all workspaces (persistent 1–5 + dynamic ones like 6–10)
+    "all-outputs": true,
+
+    // Always show 1–5 on BOTH monitors
+    "persistent-workspaces": {
+      "DP-1": [1, 2, 3, 4, 5],
+      "HDMI-A-1": [1, 2, 3, 4, 5]
+    },
+
+    "on-scroll-up": "hyprctl dispatch workspace +1",
+    "on-scroll-down": "hyprctl dispatch workspace -1",
+    "cursor": true
+  }
+}
+
