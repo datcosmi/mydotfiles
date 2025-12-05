@@ -1,7 +1,7 @@
 theme = Catppuccin Mocha
 # theme = GruvboxDark
-# font-family = JetBrains Mono Nerd Font
-font-family = Hack Nerd Font
+font-family = JetBrains Mono Nerd Font
+# font-family = Hack Nerd Font
 # font-family = CaskaydiaCove Nerd Font
 font-size = 10
 background-opacity = 0.95
