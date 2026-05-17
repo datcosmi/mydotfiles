@@ -1,0 +1,79 @@
+/* Hardware */
+
+#hardware {
+  /* background-color: @crust; */
+  padding: 0 5px;
+  border-radius: 30px;
+}
+
+#cpu,
+#memory,
+#temperature {
+  padding: 0;
+  color: @blue;
+}
+
+#cpu,
+#memory,
+#cpu.warning,
+#cpu.critical,
+#memory.warning,
+#memory.critical {
+  margin: 0 7px;
+}
+
+#temperature,
+#temperature.warning,
+#temperature.critical {
+  margin: 0 3px;
+}
+
+#cpu.warning,
+#memory.warning,
+#temperature.warning {
+  color: @peach;
+}
+
+#cpu.critical,
+#memory.critical,
+#temperature.critical {
+  color: @red;
+}
+
+/* Distro | User */
+
+#user label {
+  color: @pink;
+  background-color: transparent;
+  margin: 5px;
+  padding: 0;
+}
+
+#user {
+  background-color: @crust;
+  border-radius: 30px;
+  padding: 0 9px 0 6px;
+}
+
+#group-user {
+  margin: 0 10px;
+}
+
+#custom-distro {
+  font-size: 17px;
+  padding: 0 4px 0 10px;
+  color: @pink;
+  background-color: transparent;
+}
+
+/* Spotify */
+
+#custom-spotify {
+  color: @teal;
+  margin: 0;
+  padding: 0 5px 0 11px;
+}
+
+#custom-not-playing {
+  color: @text;
+}

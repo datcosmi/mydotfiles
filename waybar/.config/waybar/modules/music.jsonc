@@ -1,0 +1,10 @@
+{
+  "custom/spotify": {
+    "exec": "waybar-media-player",
+    "format": "{}",
+    "return-type": "json",
+    "on-click": "playerctl play-pause",
+    "on-scroll-up": "playerctl next",
+    "on-scroll-down": "playerctl previous",
+  },
+}

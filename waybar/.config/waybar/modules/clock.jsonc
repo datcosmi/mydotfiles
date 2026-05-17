@@ -1,0 +1,37 @@
+{
+  "clock#time": {
+    "format": "{:%I:%M}",
+    // "format": "{:%I:%M %p}",
+    // "format": "󰥔 {:%I:%M %p}",
+    // "format": "{:%H:%M}",
+    "tooltip-format": "<b>Standard Time</b>: {:%I:%M %p}",
+  },
+
+  /*--------------
+	    calendar
+	--------------*/
+
+  "clock#date": {
+    // "format": "󰃭 {:%A %d}",
+    // "format": "{:%a, %d/%m}",
+    "format": "{:%a %d %b}",
+    // "format": "{:%A %d}",
+    // "format": "{:%a, %d}",
+    // "format": "{:%d/%m}",
+    // "format": "󰃭 {:%d/%m/%y}",
+    "tooltip-format": "{calendar}",
+    "calendar": {
+      "mode": "month",
+      "mode-mon-col": 6,
+      "format": {
+        "months": "<span alpha='100%'><b>{}</b></span>",
+        "days": "<span alpha='90%'>{}</span>",
+        "weekdays": "<span alpha='80%'><i>{}</i></span>",
+        "today": "<span alpha='100%'><b><u>{}</u></b></span>",
+      },
+    },
+    "actions": {
+      "on-click": "mode",
+    },
+  },
+}

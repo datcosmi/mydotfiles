@@ -1,0 +1,83 @@
+{
+  "idle_inhibitor": {
+    "format": "{icon}",
+    "format-icons": {
+      "activated": "󰈈",
+      "deactivated": "",
+    },
+    // "start-activated": true
+  },
+
+  "group/tray-group": {
+    "orientation": "inherit",
+    "drawer": {
+      "transition-duration": 600,
+      "children-class": "tray-group-item",
+    },
+    "modules": ["custom/expand-icon", "tray"],
+  },
+  "custom/expand-icon": {
+    "format": "",
+    "tooltip": false,
+  },
+
+  "tray": {
+    "icon-size": 16,
+    "spacing": 12,
+    "cursor": true,
+  },
+
+  "custom/power": {
+    "format": "⏻",
+    "tooltip": false,
+    "on-click": "wleave",
+  },
+
+  "group/user": {
+    "orientation": "horizontal",
+    "modules": ["custom/distro", "custom/user"],
+    "drawer": {},
+  },
+
+  "custom/distro": {
+    "format": "󱄅",
+    "tooltip": false,
+  },
+
+  /*--------------
+	    username
+	--------------*/
+
+  "custom/user": {
+    "exec": "id -un",
+    "format": "{}",
+    "tooltip": false,
+  },
+
+  "custom/notifications": {
+    "exec": "~/.config/waybar/scripts/swaync.sh",
+    "interval": 2,
+    "return-type": "json",
+    "on-click": "swaync-client -t",
+    "on-click-right": "swaync-client -C",
+    // "tooltip": false
+  },
+
+  "custom/bluetooth": {
+    "exec": "~/.config/waybar/scripts/bluetooth-status.sh",
+    "return-type": "json",
+    "interval": 5,
+    "tooltip": true,
+    "on-click": "kitty --class bluetui -e bluetui",
+  },
+
+  "custom/brightness": {
+    "exec": "waybar-brightness",
+    "interval": 10,
+    "return-type": "json",
+    "on-scroll-up": "waybar-brightness up",
+    "on-scroll-down": "waybar-brightness down",
+    "on-click": "waybar-brightness set 50",
+    "tooltip": true,
+  },
+}

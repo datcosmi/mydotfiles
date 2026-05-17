@@ -1,0 +1,45 @@
+* {
+  color: @text;
+  font-family: "CommitMono Nerd Font";
+  font-size: 13px;
+  font-weight: bold;
+  transition: all 0.3s ease-out;
+}
+
+window#waybar {
+  background-color: transparent;
+  border: none;
+}
+
+/* box { */
+/*   margin: 2px 2px 0 2px; */
+/* } */
+
+.module {
+  /* margin-bottom: -1px; */
+  border-radius: 30px;
+  background-color: @mantle;
+  padding: 0 13px;
+  margin: 0;
+  /* opacity: 0.9; */
+}
+
+.modules-center {
+  background-color: @mantle;
+  border-radius: 30px;
+  padding: 9px;
+  margin: 0;
+  margin-top: 10px;
+}
+
+#tray {
+  background-color: transparent;
+}
+
+tooltip {
+  background-color: @mantle;
+  /* background: rgba(30, 30, 46, 0.85); */
+  padding: 13px;
+  /* margin: 13px; */
+  border-radius: 13px;
+}

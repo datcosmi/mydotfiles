@@ -1,0 +1,41 @@
+{
+  "group/wireplumber": {
+    "orientation": "horizontal",
+    "modules": ["wireplumber#output", "wireplumber#input"],
+    "drawer": {
+      "transition-left-to-right": false,
+    },
+  },
+
+  /*-------------------
+	    output device
+	-------------------*/
+
+  "wireplumber#output": {
+    "format": "{icon}",
+    "format-muted": "󰝟",
+    "format-icons": ["󰕿", "󰖀", "󰕾"],
+    "on-click-right": "~/.config/waybar/scripts/volume.sh output mute",
+    "on-click": "kitty --class wiremix -e wiremix",
+    "on-scroll-up": "~/.config/waybar/scripts/volume.sh output raise",
+    "on-scroll-down": "~/.config/waybar/scripts/volume.sh output lower",
+    // "tooltip-format": "Device: {node_name}",
+    "tooltip-format": "Volume: {volume}%",
+    "node-type": "Audio/Sink",
+  },
+
+  /*----------------
+	    microphone
+	----------------*/
+
+  "wireplumber#input": {
+    "format": "󰍬",
+    "format-muted": "󰍭",
+    "on-click-right": "~/.config/waybar/scripts/volume.sh input mute",
+    "on-click": "kitty --class wiremix -e wiremix",
+    "on-scroll-up": "~/.config/waybar/scripts/volume.sh input raise",
+    "on-scroll-down": "~/.config/waybar/scripts/volume.sh input lower",
+    "tooltip-format": "Volume: {volume}%",
+    "node-type": "Audio/Source",
+  },
+}

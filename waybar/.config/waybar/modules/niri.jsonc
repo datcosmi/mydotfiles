@@ -1,0 +1,22 @@
+{
+  "niri/workspaces": {
+    "format": "{icon}",
+    "format-icons": {
+      "main": "サ",
+      "comms": "ユ",
+      "games": "オ",
+      "media": "ウ",
+      "5": "ヨ",
+      "6": "一",
+      "7": "二",
+      "8": "三",
+      "9": "四",
+      "10": "五",
+      "default": "",
+    },
+  },
+
+  "niri/window": {
+    "format": "{}",
+  },
+}

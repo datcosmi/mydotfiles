@@ -1,0 +1,24 @@
+{
+  // "network": {
+  //   "interface": "enp5s0",
+  //   "format-wifi": "{essid} ({signalStrength}%) ",
+  //   "format-ethernet": "󰈀 Guayaba",
+  //   "tooltip-format": "{ipaddr}/{cidr} 󰈀",
+  //   "format-linked": "{ifname} (No IP) 󰈀",
+  //   "format-disconnected": "Disconnected ⚠",
+  //   "format-alt": "{ifname}: {ipaddr}/{cidr}"
+  // },
+  "custom/vpn": {
+    "exec": "~/.config/waybar/scripts/protonvpn-status.sh",
+    "interval": 5,
+    "return-type": "json",
+  },
+  "custom/network": {
+    "exec": "~/.config/waybar/scripts/network-check.sh",
+    "return-type": "json",
+    "interval": 5,
+    "on-click": "nmcli device wifi rescan",
+    "format": "{}",
+    "tooltip": true,
+  },
+}

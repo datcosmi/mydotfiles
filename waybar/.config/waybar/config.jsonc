@@ -1,0 +1,49 @@
+{
+  "include": [
+    "~/.config/waybar/modules/audio.jsonc",
+    "~/.config/waybar/modules/extra.jsonc",
+    "~/.config/waybar/modules/clock.jsonc",
+    "~/.config/waybar/modules/hardware.jsonc",
+    "~/.config/waybar/modules/network.jsonc",
+    "~/.config/waybar/modules/hyprland.jsonc",
+    "~/.config/waybar/modules/music.jsonc",
+  ],
+
+  // Layout
+
+  // "modules-left": [
+  //     "group/user"
+  // ],
+  "modules-center": [
+    // "custom/distro",
+    "clock#time",
+    // "hyprland/workspaces",
+    "niri/workspaces",
+    "custom/spotify",
+    "group/hardware",
+    // "group/wireplumber",
+    "custom/network",
+    "custom/vpn",
+    "custom/bluetooth",
+    "wireplumber#output",
+    "idle_inhibitor",
+    // "custom/brightness",
+    // "hyprland/windowcount",
+    "clock#date",
+    "custom/notifications",
+    "group/tray-group",
+  ],
+  // "modules-right": [
+  //     // "custom/power"
+  // ],
+
+  // Options
+
+  "layer": "top",
+  "height": 0,
+  "width": 0,
+  "margin": 0,
+  "spacing": 0,
+  "mode": "dock",
+  "reload_style_on_change": true,
+}

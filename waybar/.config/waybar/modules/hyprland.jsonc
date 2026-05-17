@@ -1,0 +1,31 @@
+{
+  "hyprland/workspaces": {
+    "format": "{icon}",
+    "format-icons": {
+      "1": "サ",
+      "2": "ユ",
+      "3": "オ",
+      "4": "ウ",
+      "5": "ヨ",
+      "6": "一",
+      "7": "二",
+      "8": "三",
+      "9": "四",
+      "10": "五",
+      "default": "",
+    },
+    "all-outputs": true,
+    "sort-by-number": true,
+    "persistent-workspaces": {
+      "*": [1, 2, 3, 4, 5],
+    },
+    "on-scroll-up": "hyprctl dispatch workspace +1",
+    "on-scroll-down": "hyprctl dispatch workspace -1",
+    "cursor": true,
+  },
+
+  "hyprland/windowcount": {
+    "format": "  {}",
+    "swap-icon-label": false,
+  },
+}

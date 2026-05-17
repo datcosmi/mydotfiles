@@ -1,0 +1,40 @@
+{
+  "group/hardware": {
+    "orientation": "horizontal",
+    "modules": ["temperature", "cpu", "memory"],
+  },
+  "cpu": {
+    "interval": 5,
+    "format": "",
+    "format-warning": " {usage}%",
+    "format-critical": " {usage}%",
+    "states": {
+      "warning": 75,
+      "critical": 90,
+    },
+    "tooltip-format": "{usage}%",
+    "on-click": "kitty --class btop -e btop",
+  },
+  "memory": {
+    "interval": 5,
+    "format": "",
+    "format-warning": "󱤓 {percentage}%",
+    "format-critical": "󱤓 {percentage}%",
+    "states": {
+      "warning": 75,
+      "critical": 90,
+    },
+    "tooltip-format": "Used: {used:0.1f} GB / {total:0.1f} GB ({percentage}%)",
+    "on-click": "kitty --class btop -e btop",
+  },
+  "temperature": {
+    "hwmon-path": "/sys/--class/hwmon/hwmon0/temp1_input",
+    "critical-threshold": 90,
+    "interval": 3,
+    "format-critical": "󱃂 {temperatureC}°C",
+    "format": "",
+    "format-icons": ["󱃃", "󰔏", "󱃂"],
+    "tooltip-format": "{temperatureC}°C",
+    "on-click": "kitty --class btop -e btop",
+  },
+}

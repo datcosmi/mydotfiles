@@ -1,0 +1,14 @@
+/* Theme */
+@import "themes/mocha.css";
+@import "themes/dream-lavender.css";
+
+/* Ignore GTK theme */
+* {
+  all: initial;
+}
+
+/* Styles */
+@import "styles/global.css";
+@import "styles/modules-center.css";
+@import "styles/modules-left.css";
+@import "styles/modules-right.css";

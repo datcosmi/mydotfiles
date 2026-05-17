@@ -1,0 +1,115 @@
+/* Workspaces */
+
+#workspaces {
+  padding: 0;
+  margin: 0 0px;
+}
+
+#workspaces button {
+  border-radius: 30px;
+  background-color: @mantle;
+  padding: 2px 7px;
+  margin: 0 2px;
+}
+
+#workspaces button:hover {
+  background-color: @mantle;
+}
+
+#workspaces button:hover label {
+  color: @pink;
+}
+
+#workspaces button label {
+  color: @overlay2;
+  font-size: 12px;
+}
+
+#workspaces button.active,
+#workspaces button.active.empty {
+  background-color: @pink;
+  padding: 0 17px;
+}
+
+#workspaces button.active label,
+#workspaces button.active.empty label {
+  color: @mantle;
+}
+
+#workspaces button.active:hover {
+  /* color: @surface1; */
+  opacity: 0.8;
+}
+
+#workspaces button.empty {
+  background-color: @mantle;
+}
+
+#workspaces button.empty label {
+  color: @surface2;
+}
+
+#workspaces button.empty:hover {
+  background-color: @mantle;
+}
+
+#workspaces button.empty:hover label {
+  color: @pink;
+}
+
+#workspaces button.active.empty:hover {
+  background-color: @pink;
+}
+
+#workspaces button.active.empty:hover label {
+  color: @mantle;
+}
+
+/* Clock */
+
+#clock {
+  /* color: @subtext0; */
+  margin: 0;
+  padding: 0 10px;
+  background-color: transparent;
+}
+
+/* #clock.time { */
+/*   padding: 0 6px 0 10px; */
+/* } */
+
+#clock.date {
+  padding: 0 10px;
+}
+
+/* Notifications */
+
+#custom-notifications {
+  font-size: 14px;
+  color: @text;
+  padding: 0 13px 0 6px;
+}
+
+#custom-notifications.empty {
+  color: @flamingo;
+}
+
+#custom-notifications.filled {
+  color: @flamingo;
+  font-weight: bold;
+}
+
+#custom-notifications.dnd {
+  color: @maroon;
+  /* padding: 0 13px 0 7px; */
+}
+
+/* Window count */
+
+#windowcount {
+  padding: 0 6px;
+}
+
+#windowcount label {
+  color: @lavender;
+}

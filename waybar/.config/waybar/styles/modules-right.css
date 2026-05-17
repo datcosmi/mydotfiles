@@ -1,0 +1,93 @@
+/* Volume */
+
+#wireplumber {
+  color: @yellow;
+  border-radius: 30px;
+  /* font-size: 15px; */
+}
+
+#wireplumber.output,
+#wireplumber.input {
+  margin: 0 10px;
+  padding: 0;
+}
+
+/* Network */
+
+#custom-vpn.vpn-on {
+  color: @teal;
+  padding: 0 13px;
+}
+
+#custom-vpn.vpn-off {
+  color: @maroon;
+  padding: 0 7px 0 13px;
+}
+
+#custom-network {
+  padding: 0 3px;
+}
+
+#custom-network.ethernet,
+#custom-network.wifi {
+  color: @mauve;
+}
+
+#custom-network.disconnected,
+#custom-network.no-internet {
+  color: @red;
+}
+
+/* Bluetooth */
+
+#custom-bluetooth {
+  padding: 0 8px;
+}
+
+#custom-bluetooth.off {
+  color: @maroon;
+}
+
+#custom-bluetooth.on {
+  color: @lavender;
+}
+
+#custom-bluetooth.connected {
+  color: @blue;
+}
+
+/* Power button */
+
+#custom-power {
+  color: @flamingo;
+  padding: 0 15px 0 13px;
+}
+
+/* Idle Lock */
+#idle_inhibitor {
+  padding: 0 10px;
+  color: @pink;
+}
+
+/* #idle_inhibitor.deactivated { */
+/*   color: @mauve; */
+/* } */
+/**/
+/* #idle_inhibitor.activated { */
+/*   color: @mauve; */
+/* } */
+
+/* Tray */
+
+#tray-group label {
+  margin: 0 10px 0 5px;
+  padding: 0;
+}
+
+/* Brightness */
+
+#custom-brightness {
+  color: @rosewater;
+  padding: 0;
+  margin: 0 3px 0 12px;
+}
