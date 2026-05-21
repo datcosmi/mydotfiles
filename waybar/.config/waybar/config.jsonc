@@ -29,6 +29,7 @@
     "idle_inhibitor",
     // "custom/brightness",
     // "hyprland/windowcount",
+    "battery",
     "clock#date",
     "custom/notifications",
     "group/tray-group",
