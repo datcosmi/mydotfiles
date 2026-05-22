@@ -95,11 +95,13 @@
 /* Battery */
 
 #battery {
-  padding: 0 8px 0 11px;
+  padding: 0 10px 0 12px;
   color: @mauve;
 }
 
-#battery.plugged #battery.charging {
+#battery.plugged,
+#battery.charging {
+  padding: 0 6px 0 12px;
   color: @sky;
 }
 
