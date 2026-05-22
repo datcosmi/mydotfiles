@@ -31,7 +31,7 @@ ethernet_info=$(get_ethernet_info)
 
 if [ -n "$ethernet_info" ] && [ "$ethernet_info" = "connected" ]; then
     icon="󰈀"
-    # text="Ethernet"
+    text="Ethernet"
     class="ethernet"
 elif [ -n "$wifi_info" ]; then
     ssid=$(echo "$wifi_info" | cut -d'|' -f1)
@@ -47,7 +47,7 @@ elif [ -n "$wifi_info" ]; then
         icon="󰤟"
     fi
     
-    # text="$ssid"
+    text="$ssid"
     class="wifi"
 else
     icon="󰤮"
@@ -64,4 +64,4 @@ else
 fi
 
 # Output in JSON format
-echo "{\"text\":\"$icon $text\",\"tooltip\":\"$tooltip\",\"class\":\"$class\"}"
+echo "{\"text\":\"$icon \",\"tooltip\":\"$tooltip\",\"class\":\"$class\"}"
