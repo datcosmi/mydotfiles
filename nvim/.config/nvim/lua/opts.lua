@@ -19,11 +19,12 @@ vim.opt.guicursor = "n:block-blinkon500-blinkoff500"
 -- Tabs
 vim.keymap.set({ "n", "v" }, "<leader>h", ":tabp <CR>", {})
 vim.keymap.set({ "n", "v" }, "<leader>l", ":tabn <CR>", {})
-vim.keymap.set({ "n", "v" }, "<leader>x", ":tabc <CR>", {})
-vim.keymap.set({ "n", "v" }, "<leader>X", ":tabo <CR>", {})
+-- vim.keymap.set({ "n", "v" }, "<leader>x", ":tabc <CR>", {})
+-- vim.keymap.set({ "n", "v" }, "<leader>X", ":tabo <CR>", {})
 
 -- Buffers
-vim.keymap.set({ "n", "v" }, "<s-x>", ":close <CR>", {})
+vim.keymap.set({ "n", "v" }, "<leader>x", ":bd <CR>", {})
+-- vim.keymap.set({ "n", "v" }, "<s-x>", ":close <CR>", {})
 
 -- Turn off ~ symbols
 vim.opt.fillchars = { eob = " " }
