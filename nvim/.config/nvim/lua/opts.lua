@@ -31,3 +31,7 @@ vim.opt.fillchars = { eob = " " }
 
 -- Format with conform
 vim.api.nvim_set_keymap("n", "<leader>z", '<cmd>lua require("conform").format()<CR>', { noremap = true, silent = true })
+
+-- Make search case-insensitive
+vim.opt.ignorecase = true
+vim.opt.smartcase = true
