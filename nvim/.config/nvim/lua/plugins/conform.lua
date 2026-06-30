@@ -1,3 +1,4 @@
+-- lua/plugins/conform.lua
 return {
 	"stevearc/conform.nvim",
 	keys = {
@@ -23,7 +24,10 @@ return {
 				cs = { "csharpier" },
 				sql = { "sqlfluff" },
 			},
-			format_on_save = { timeout_ms = 2000, lsp_fallback = true },
+			format_on_save = {
+				timeout_ms = 2000,
+				lsp_fallback = true,
+			},
 		})
 	end,
 }
