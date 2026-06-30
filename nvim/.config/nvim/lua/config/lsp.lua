@@ -13,7 +13,15 @@ local on_attach = function(_, bufnr)
 	map({ "n", "v" }, "<leader>ca", vim.lsp.buf.code_action)
 end
 
--- Helper
+-- Helper to find project root by walking up for markers
+local find_root = function(markers)
+	return function(bufnr)
+		local path = vim.api.nvim_buf_get_name(bufnr)
+		local found = vim.fs.find(markers, { path = path, upward = true })[1]
+		return found and vim.fs.dirname(found) or vim.fn.getcwd()
+	end
+end
+
 local start = function(opts)
 	vim.api.nvim_create_autocmd("FileType", {
 		pattern = opts.filetypes,
@@ -23,6 +31,7 @@ local start = function(opts)
 				cmd = opts.cmd,
 				root_dir = opts.root_dir,
 				settings = opts.settings,
+				init_options = opts.init_options,
 				on_attach = on_attach,
 			})
 		end,
@@ -101,4 +110,25 @@ start({
 	name = "astro",
 	cmd = { "astro-ls", "--stdio" },
 	filetypes = { "astro" },
+})
+
+-- C#
+start({
+	name = "csharp_ls",
+	cmd = { "csharp-ls" },
+	filetypes = { "cs" },
+	root_dir = find_root({ "*.sln", "*.csproj" }),
+	init_options = {
+		AutomaticWorkspaceInit = true,
+	},
+})
+
+-- ESLint
+start({
+	name = "eslint",
+	cmd = { "vscode-eslint-language-server", "--stdio" },
+	filetypes = { "javascript", "typescript", "javascriptreact", "typescriptreact" },
+	settings = {
+		workingDirectory = { mode = "auto" },
+	},
 })
