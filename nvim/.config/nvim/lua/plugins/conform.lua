@@ -19,6 +19,7 @@ return {
 				rust = { "rustfmt", lsp_format = "fallback" },
 				javascript = { "prettierd", "prettier", stop_after_first = true },
 				typescript = { "prettierd", "prettier", stop_after_first = true },
+				astro = { "prettier" },
 				nix = { "alejandra" },
 				kdl = { "kdlfmt" },
 				cs = { "csharpier" },
@@ -28,6 +29,9 @@ return {
 				timeout_ms = 2000,
 				lsp_fallback = true,
 			},
+		})
+		vim.filetype.add({
+			extension = { astro = "astro" },
 		})
 	end,
 }
