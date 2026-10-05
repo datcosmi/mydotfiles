@@ -8,6 +8,9 @@ return {
 		},
 	},
 	before_init = function(_, config)
-		config.init_options.typescript.tsdk = config.root_dir .. "/node_modules/typescript/lib"
+		-- Use the project's own TypeScript (guard: root_dir can be nil for single files)
+		if config.root_dir then
+			config.init_options.typescript.tsdk = config.root_dir .. "/node_modules/typescript/lib"
+		end
 	end,
 }
