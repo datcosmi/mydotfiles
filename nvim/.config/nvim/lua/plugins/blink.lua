@@ -1,13 +1,7 @@
 return {
 	"saghen/blink.cmp",
-	-- Pin to a tagged release so lazy.nvim downloads the pre-built fuzzy-matcher
-	-- binary instead of requiring a Rust toolchain to compile from source.
 	-- v2 is still under active, breaking development
 	version = "1.*",
-	-- Capabilities must be registered before any LSP client attaches. Your
-	-- servers start on FileType (see lua/config/lsp.lua), which fires right
-	-- after BufReadPre/BufNewFile -- so loading here (not on InsertEnter,
-	-- which is the more common recommendation) preserves that ordering.
 	event = { "BufReadPre", "BufNewFile" },
 	dependencies = {
 		"rafamadriz/friendly-snippets",
@@ -15,7 +9,9 @@ return {
 	},
 	opts = {
 		keymap = {
-			preset = "default", -- <CR> = accept, <Tab>/<S-Tab> = next/prev, <C-space> = show
+			-- "default" preset: <C-y> = accept, <C-n>/<C-p> = next/prev, <C-space> = show,
+			-- <Tab>/<S-Tab> = jump through snippet placeholders.
+			preset = "default",
 			["<C-b>"] = { "scroll_documentation_up", "fallback" },
 			["<C-f>"] = { "scroll_documentation_down", "fallback" },
 			["<C-e>"] = { "hide", "fallback" },
@@ -35,6 +31,13 @@ return {
 		snippets = { preset = "luasnip" },
 		sources = {
 			default = { "lsp", "path", "snippets", "buffer" },
+			-- Completion for vim.*, Snacks.*, require("...") in lua files
+			per_filetype = {
+				lua = { inherit_defaults = true, "lazydev" },
+			},
+			providers = {
+				lazydev = { name = "LazyDev", module = "lazydev.integrations.blink", score_offset = 100 },
+			},
 		},
 		-- Falls back to the Lua matcher automatically if the Rust binary
 		-- can't be downloaded/loaded for any reason, with a one-time warning.

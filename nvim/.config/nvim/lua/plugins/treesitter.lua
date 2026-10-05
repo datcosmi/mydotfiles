@@ -1,14 +1,10 @@
 return {
 	{
-		-- The original nvim-treesitter/nvim-treesitter was archived by its
-		-- maintainer on 2026-04-03 :(. This is the actively maintained community
-		-- continuation
-		"neovim-treesitter/nvim-treesitter",
+		"nvim-treesitter/nvim-treesitter",
 		branch = "main",
 		lazy = false,
 		build = ":TSUpdate",
-		main = "nvim-treesitter",
-		dependencies = { "nvim-lua/plenary.nvim", "neovim-treesitter/treesitter-parser-registry" },
+		dependencies = { "nvim-lua/plenary.nvim" },
 		init = function()
 			require("nvim-treesitter").install({
 				"lua",
@@ -29,6 +25,21 @@ return {
 				"yaml",
 				"markdown",
 				"markdown_inline",
+				-- extras: git buffers, regex/jsdoc injections, neovim config, misc
+				"diff",
+				"gitcommit",
+				"git_rebase",
+				"gitignore",
+				"regex",
+				"jsdoc",
+				"scss",
+				"dockerfile",
+				"luadoc",
+				"vim",
+				"vimdoc",
+				"query",
+				"nix",
+				"kdl",
 			})
 
 			-- Parser name doesn't always match Neovim's filetype name -- when it
