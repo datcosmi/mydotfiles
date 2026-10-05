@@ -14,14 +14,11 @@ if not (vim.uv or vim.loop).fs_stat(lazypath) then
 end
 vim.opt.rtp:prepend(lazypath)
 
-require("opts")
-require("lsp")
--- require("autocmds")
--- require("lsp")
 require("lazy").setup({
   spec = {
     { import = "plugins" },
   },
-    install = { colorscheme = { "tokyonight", "habamax" } },
-    checker = { enabled = true, notify = false },
+  install = { colorscheme = { "catppuccin", "habamax" } },
+  checker = { enabled = true, notify = false },
+  change_detection = { notify = false },
 })
