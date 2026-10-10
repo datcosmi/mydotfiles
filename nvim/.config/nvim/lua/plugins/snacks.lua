@@ -18,10 +18,19 @@ return {
 		zen = {}, -- zen / zoom mode
 		terminal = {}, -- floating terminal toggle
 
+		-- Smooth scroll without it being too slow
+		scroll = {
+			enabled = true,
+			animate = {
+				duration = { step = 10, total = 50 },
+				easing = "linear",
+			},
+		},
+
 		-- Indent guides + current scope
 		indent = {
 			indent = { char = "│", hl = "SnacksIndent" },
-			scope = { enabled = true, char = "│", hl = "SnacksIndentScope" },
+			scope = { enabled = true, char = "│", hl = "SnacksIndentScope", treesitter = { enabled = false } },
 			chunk = { enabled = false },
 		},
 
